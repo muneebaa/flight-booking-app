@@ -1,0 +1,73 @@
+.payment-info-main{
+
+}
+
+.payment-info-text{
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--clr-text-light);
+    margin-top: .5em;
+}
+
+.selected-meth-text{
+    color: var(--clr-text-light);
+    margin-top: 2em;
+    font-weight: 600;
+        font-size: 18px;
+}
+
+.payment-methods-main{
+    border: 2px solid var(--clr-main);
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+.payment-meth-single{
+    width: 25%;
+    padding: 1em;
+    height: 100%;
+    color:var(--clr-main);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.payment-meth-single p{
+    margin-left: .5em;
+}
+
+.selected-meth{
+    background-color: var(--clr-main);
+    border: 1px solid var(--clr-main);
+    color: white;
+}
+
+.selected-method-details{
+    width: 50%;
+}
+
+.selected-method-details input {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #A1B0CC;
+    border-radius: 4px;
+    padding: 14px;
+    outline: none;
+    margin-top: 1em;
+}
+
+.selected-method-details input:focus {
+
+    border: 2px solid var(--clr-main-light);
+
+}
+
+
+.selected-det-separate{
+    display: flex;
+    justify-content: space-between;
+    width: 106%;
+}
+
+.payment-button{
+    margin-top: 1em;
+}

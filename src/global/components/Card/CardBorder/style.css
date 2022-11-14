@@ -1,0 +1,5 @@
+.card-border-main{
+    background: #FFFFFF;
+    border: 1px solid var(--clr-border-light);
+    padding: 1em;
+}

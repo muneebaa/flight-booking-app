@@ -1,0 +1,102 @@
+.stepper {
+   /* border: 1px solid red; */
+   width: 50%;
+   margin: 0 auto;
+}
+
+.departure-flights-main{
+    padding: 0 3em;
+    padding-top: 10em;
+    padding-bottom: 2em;
+}
+
+.choose-dept-flight-text{
+    font-weight: 600;
+        font-size: 18px;
+}
+
+.dept-flight-single{
+    /* border: 1px solid #abaaff; */
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-border-light);
+    cursor: pointer;
+}
+
+.dept-flight-single:hover {
+    background-color: rgb(250, 249, 249);
+}
+
+.dept-company-airtime,.dept-company-time,.dept-stops,.dept-price,.dept-book-now{
+    width: 25%;
+}
+
+.dept-stops,.dept-price{
+    text-align: right;
+}
+
+.all-dept-flights-main{
+    border:1px solid  var(--clr-border-light);
+    padding: 1em;
+    margin-top: 1em;
+    width: 70%;
+}
+
+.dept-book-now{
+    text-align: center;
+}
+
+.dept-company-airtime :nth-child(1),.dept-stops,.dept-price{
+   font-weight: 400;
+    font-size: 16px;
+}
+
+.dept-company-airtime :nth-child(2),.dept-stops :nth-child(2),.selected-flight-company :nth-child(2) {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--clr-text-light);
+    margin-top: .5em;
+}
+
+.selected-flight-main{
+    margin-top: 1em;
+    width: 30%;
+    margin-left: 1em;
+}
+
+.selected-flight-company h2{
+}
+
+.selected-flight-times{
+    text-align: right;
+}
+
+.selected-flight-stop{
+    color: var(--clr-text-light);
+}
+
+.selected-flight-button{
+    text-align: right;
+    margin-top: 1.5em;
+    padding:0 1em;
+}
+
+.selected-flight-button p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: .5em;
+}
+
+.selected-flight-button button {
+    margin-top: .5em;
+}
+
+.bags-image{
+   /* border: 1px solid red; */
+
+    position: absolute;
+   right: 180px;
+    top: 300px;
+}

@@ -1,0 +1,27 @@
+.r-main{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+
+.c1{
+    border: 1px solid green;
+    display: flex;
+}
+
+.c2 {
+    border: 1px solid blue;
+    display: flex;
+}
+
+.c3 {
+    border: 1px solid purple;
+    display: flex;
+}
+
+p{
+    padding: .5em;
+    background-color: black;
+    color: white;
+    margin-left: .5em;
+}

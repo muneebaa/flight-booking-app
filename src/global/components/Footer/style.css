@@ -1,0 +1,10 @@
+.footer-main{
+    border-top:1px solid var(--clr-border-light);
+    padding: 1em 3em;
+}
+
+.footer-main p{
+    color: var(--clr-text-light);
+    font-weight: 400;
+    font-size: 18px;
+}

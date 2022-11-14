@@ -1,0 +1,77 @@
+.passenger-form-main{
+    width: 50%;
+}
+
+.passenger-form-input-main input{
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #A1B0CC;
+    border-radius: 4px;
+    padding: 14px;
+    outline: none;
+    margin-top:1em ;
+}
+
+.passenger-form-input-main input:focus {
+
+    border: 2px solid var(--clr-main-light);
+
+}
+
+.passenger-info-text{
+    color: var(--clr-text-light);
+    width: 70%;
+    margin-top: 1em;
+}
+
+.passenger-info-form-main{
+    margin-top: 1em;
+}
+
+.passenger-form-input-main input::placeholder {
+    font-size: 1em;
+    font-family: var(--font-accent);
+}
+
+.passenger-emergency-contact{
+    font-weight: 600;
+    color: var(--clr-text-dark);
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+.passenger-bag-info{
+    color: var(--clr-text-light);
+}
+
+.no-of-bag-main{
+    width: 40%;
+    margin-top: 1em;
+}
+
+.no-of-bag-main div {
+    margin-top: .5em;
+    color: var(--clr-text-dark);
+}
+
+.no-bags-text {
+    text-align: right;
+    color: var(--clr-text-light);
+}
+
+.no-of-bag-main button{
+    border: none;
+    background-color: var(--clr-border-light);
+    color: var(--clr-main);
+    width: 32px;
+    height: 32px;
+    font-size: 1.5em;
+}
+
+.no-of-bag-buttons p{
+    padding: 0 1em;
+}
+
+.passenger-button{
+    margin-top: 1em;
+}

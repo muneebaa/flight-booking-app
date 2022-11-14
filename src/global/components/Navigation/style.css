@@ -1,0 +1,46 @@
+.navigation-main{
+    padding: 1em;
+    box-shadow:5px 5px 20px rgb(235, 235, 235);
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    right: 0;
+    z-index: 10;
+}
+
+.navigation-logo{
+    font-family: "Baloo 2" , sans-serif;
+    color: var(--clr-main);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.navigation-user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:#ec5dc1;
+    color: white;
+}
+
+.navigation-links{
+    color: var(--clr-text-light);
+}
+
+.navigation-links p:hover{
+    color: var(--clr-main);
+    cursor: pointer;
+}
+
+.navigation-links button,.navigation-user,.navigation-links .navigation-links-single{
+    margin-left: 1em;
+}
+
+.navigation-hide-main {
+    padding: 1em;
+    position: fixed;
+    width: 98%;
+    right: 0;
+    z-index: 10;
+}

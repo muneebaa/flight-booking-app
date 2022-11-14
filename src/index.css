@@ -1,13 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --clr-main:#605DEC;
+  --clr-main-light:#8381ff;
+  --clr-text-light:#7C8DB0;
+  --clr-text-dark:#6E7491;
+  --clr-border:#c6c6c6;
+  --clr-border-light:#E9E8FC;
+  --font-main:"Baloo 2", sans-serif;
+  --font-accent:'Nunito Sans', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-accent);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  width: 10px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--clr-text-light);
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #4c49ff;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 3px solid #4c49ff;
+  /* creates padding around scroll thumb */
+}
+
+
+body::-webkit-scrollbar {
+  width: 10px;
+  margin-right: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(220, 220, 220);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #918ffa;
+  border-radius: 20px;
+  border: 3px solid #918ffa;
+}
+
+h1,h2,h3,h4,h5,p{
+  margin:0;
+  padding:0;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.input-single {
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: small;
+  padding-top: .5em;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+.flex-align-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-align-center-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.def-padding{
+  padding: 3em;
+}
+
+.main-span{
+  color: var(--clr-main);
+}
+
+.m-left{
+  margin-left: 1em;
 }

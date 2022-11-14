@@ -1,0 +1,27 @@
+.login-main{
+    padding: 1em 2em;
+}
+
+.login-main h1{
+    color: var(--clr-text-dark);
+    font-size: 24px;
+}
+
+.login-content p{
+    color: var(--clr-text-light);
+    font-size: 15px;
+    margin-top: .5em;
+}
+
+.login-content input{
+    padding: 12px ;
+    border:1px solid var(--clr-border) ;
+    margin-top: 1em;
+    border-radius: 3px;
+    outline: none;
+}
+
+.login-content button{
+    margin-top: 1em;
+    font-weight:300;
+}

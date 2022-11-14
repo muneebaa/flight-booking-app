@@ -1,0 +1,37 @@
+.flight-confirmation{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.flight-confirm-check{
+    font-size: 3rem;
+    color: #46aa2b;
+}
+
+.flight-confirm-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1em;
+
+}
+
+.flight-confirm-text button{
+    margin-top: 1em;
+}
+
+.flight-confirm-text p {
+    color: #46aa2b;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.flight-confirm-text p span{
+    padding: .5em;
+}

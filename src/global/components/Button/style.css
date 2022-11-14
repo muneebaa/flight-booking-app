@@ -1,0 +1,27 @@
+.button-comp{
+    background-color: var(--clr-main);
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    border-radius: 5px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.border{
+    border:2px solid var(--clr-main-light);
+    background-color: white;
+    color: var(--clr-main);
+}
+
+.border:hover {
+    background-color: var(--clr-main);
+    color: white;
+}
+
+.button-comp:hover{
+    background-color: var(--clr-main-light);
+    color: white;
+}
