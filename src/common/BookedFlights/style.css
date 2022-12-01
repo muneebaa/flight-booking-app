@@ -19,7 +19,7 @@
     display: flex;
 }
 
-p{
+.r-main p{
     padding: .5em;
     background-color: black;
     color: white;

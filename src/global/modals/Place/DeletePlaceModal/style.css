@@ -1,0 +1,13 @@
+.delete-modal-main{
+    display: flex;
+    flex-direction: column;
+}
+
+.delete-modal-main p{
+    margin-top: 1em;
+}
+
+.delete-place-button {
+    margin-top: 1em;
+    align-self: flex-end;
+}

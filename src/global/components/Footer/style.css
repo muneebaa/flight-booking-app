@@ -1,6 +1,11 @@
 .footer-main{
     border-top:1px solid var(--clr-border-light);
     padding: 1em 3em;
+    background: white;
+    /* position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%; */
 }
 
 .footer-main p{

@@ -4,6 +4,7 @@ import { getPlaceFlight } from 'services/places/index';
 import { Button, CardBorder } from 'global/components';
 import { Stepper, Step } from 'react-form-stepper';
 import { createBookFlight } from 'store/features/bookFlight';
+import moment from 'moment';
 
 import './style.css';
 import PassengerForm from 'common/PassengerForm';
@@ -39,11 +40,22 @@ function Flights() {
       subtotal: selectedFlight.price,
       origin: selectedFlight.origin,
       destination: selectedFlight.destination,
+      company: selectedFlight.company,
       tax: tax,
     };
     dispatch(createBookFlight(payload));
     setGoSteps(1);
   };
+
+  function calc_time(dt2, dt1) {
+    const start = moment(dt2);
+    const end = moment(dt1);
+    const duration = moment.duration(end.diff(start));
+    const hours = duration.hours();
+    const minutes = duration.minutes();
+    console.log(hours);
+    return `${hours}h ${minutes}min`;
+  }
 
   return (
     <>
@@ -63,7 +75,12 @@ function Flights() {
                     className='dept-flight-single'
                     onClick={() => setSelectedFlight(flight)}>
                     <div className='dept-company-airtime'>
-                      <p>3h 2min</p>
+                      <p>
+                        {calc_time(
+                          new Date(flight?.depart_time),
+                          new Date(flight?.arrival_time)
+                        )}
+                      </p>
                       <p>{flight.company}</p>
                     </div>
                     <div className='dept-company-time'>
@@ -110,16 +127,27 @@ function Flights() {
                             </p>
                           </div>
                           <div className='selected-flight-times'>
-                            <p>2h 5min</p>
+                            <p>
+                              {calc_time(
+                                new Date(selectedFlight?.depart_time),
+                                new Date(selectedFlight?.arrival_time)
+                              )}
+                            </p>
 
                             <p>
-                              {selectedFlight.timeStart} -{' '}
-                              {selectedFlight.timeEnd}
-                            </p>
-                            <p className='selected-flight-stop'>
-                              {selectedFlight.stops
-                                ? `${selectedFlight.stopTime[0]} in ${selectedFlight.stopDestination[0]}`
-                                : 'Nonstop'}
+                              {new Date(
+                                selectedFlight.depart_time
+                              ).toLocaleTimeString([], {
+                                hour: '2-digit',
+                                minute: '2-digit',
+                              })}{' '}
+                              -{' '}
+                              {new Date(
+                                selectedFlight.arrival_time
+                              ).toLocaleTimeString([], {
+                                hour: '2-digit',
+                                minute: '2-digit',
+                              })}
                             </p>
                           </div>
                         </div>
@@ -129,10 +157,10 @@ function Flights() {
                           Subtotal PKR{' '}
                           {selectedFlight.price.toLocaleString('en-PK')}
                         </p>
-                        <p>Taxes and Fees PKR 3097</p>
+                        <p>Taxes and Fees PKR {tax}</p>
                         <p>
                           Total PKR{' '}
-                          {(Number(selectedFlight.price) + 3097).toLocaleString(
+                          {(Number(selectedFlight.price) + tax).toLocaleString(
                             'en-PK'
                           )}
                         </p>

@@ -1,22 +1,68 @@
 .mytrips-main{
     padding: 0 3em;
-        padding-top: 10em;
-        padding-bottom: 2em;
+    padding-top: 10em;
+    padding-bottom: 2em;
 }
 
-.alltickets-main{
-    width: 80%;
-    margin: 0 auto;
-}
-
-.ticket-main{
-    width: 100%;
-    border: 2px solid var(--clr-border);
-    border-radius: 5px;
+.ticket-single{
     display: flex;
     align-items: center;
-    padding: 2em;
-    margin-top: 1em;
+    background-color: rgb(255, 255, 255);
+    padding: 1em;
     justify-content: space-between;
-    cursor: pointer;
+    margin-top: 1em;
+    border: 2px solid var(--clr-border-light);
+
+}
+
+.ticket-time , .ticket-place , .ticket-id, .ticket-confirm,.ticket-print,.ticket-cancel{
+    width: 16.66%;
+}
+
+.ticket-id,
+.ticket-confirm,
+.ticket-print,
+.ticket-cancel{
+    text-align: right;
+}
+
+.ticket-time :nth-child(1),.ticket-place :nth-child(1) {
+    font-size: 1.5rem;
+    font-size: bolder;
+    color: var(--clr-text-dark);
+}
+
+.ticket-time :nth-child(2),.ticket-place :nth-child(2) ,.ticket-id,.ticket-confirm :nth-child(2){
+    font-size:.854rem;
+    font-size: bolder;
+    margin-top: -3px;
+    color: var(--clr-text-light);
+}
+
+.ticket-confirm :nth-child(1){
+    /* background-color: rgb(90, 149, 0); */
+    color: green;
+    font-weight: 700;
+    font-size: 1.25rem;/* padding: .4em; */
+}
+
+.ticket-print{
+
+}
+
+.ticket-print a{
+    color: rgb(118, 180, 251);
+    font-size: 1.5rem;
+    padding: 0 1em;
+}
+
+.ticket-cancel button{
+    padding: 1em 2em;
+    background-color: #e12323;
+    border: none;
+    border-radius: 5px;
+    font-size: .75rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
 }

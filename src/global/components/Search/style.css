@@ -1,0 +1,6 @@
+.search-input{
+    padding: 1em;
+    border: 2px solid var(--clr-main);
+    width: 50%;
+    outline: none;
+}

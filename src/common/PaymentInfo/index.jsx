@@ -103,25 +103,41 @@ function PaymentInfo({ setGoSteps }) {
 
       <div className='payment-methods-main flex-align'>
         <div
-          className='payment-meth-single selected-meth flex-align'
+          className={
+            selected === 'Credit Card'
+              ? ' payment-meth-single  flex-align selected-meth'
+              : 'payment-meth-single  flex-align'
+          }
           onClick={() => setSelected('Credit Card')}>
           <AiOutlineCreditCard />
           <p>Credit Card</p>
         </div>
         <div
-          className='payment-meth-single flex-align'
+          className={
+            selected === 'Google Pay'
+              ? ' payment-meth-single  flex-align selected-meth'
+              : 'payment-meth-single  flex-align'
+          }
           onClick={() => setSelected('Google Pay')}>
           <AiOutlineGoogle />
           <p>Google Pay</p>
         </div>
         <div
-          className='payment-meth-single flex-align'
+          className={
+            selected === 'Apple Pay'
+              ? ' payment-meth-single  flex-align selected-meth'
+              : 'payment-meth-single  flex-align'
+          }
           onClick={() => setSelected('Apple Pay')}>
           <AiFillApple />
           <p>Apple Pay</p>
         </div>
         <div
-          className='payment-meth-single flex-align'
+          className={
+            selected === 'Paypal'
+              ? ' payment-meth-single  flex-align selected-meth'
+              : 'payment-meth-single  flex-align'
+          }
           onClick={() => setSelected('Paypal')}>
           <RiPaypalFill />
           <p>Paypal</p>

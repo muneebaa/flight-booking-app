@@ -4,6 +4,7 @@ import Flights from './Flights';
 import BookedFlights from './BookedFlights';
 import PassengerForm from './PassengerForm';
 import PaymentInfo from './PaymentInfo';
+import FlightConfirmation from './FlightConfirmation';
 import Seats from './Seats';
 import MyTrips from './MyTrips';
 

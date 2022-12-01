@@ -1,0 +1,9 @@
+.update-place-button{
+    align-self: flex-end;
+    margin-top: 1em;
+}
+
+.update-place-modal{
+    display: flex;
+    flex-direction: column;
+}

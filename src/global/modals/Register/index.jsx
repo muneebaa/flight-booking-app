@@ -5,7 +5,7 @@ import { userRegister } from 'store/features/authSlice';
 
 import './style.css';
 
-function Login() {
+function Register({ setRegisterVisible }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -19,6 +19,7 @@ function Login() {
     };
 
     await dispatch(userRegister(payload)).unwrap();
+    setRegisterVisible(false);
   };
 
   return (
@@ -60,4 +61,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Register;

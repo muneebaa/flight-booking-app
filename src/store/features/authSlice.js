@@ -55,15 +55,17 @@ export const userRegister = createAsyncThunk(
         withCredentials: true,
       });
 
+      console.log(data);
+
       if (response.status === 201) {
         setUserToLocalStorage(response.data.user);
         dispatch(
           showAlert({
-            message: 'Login Successful',
+            message: 'Signup Successful',
             type: 'success',
           })
         );
-        return response.user;
+        return response.data;
       }
     } catch (error) {
       dispatch(
@@ -77,10 +79,35 @@ export const userRegister = createAsyncThunk(
   }
 );
 
+export const logOutUser = createAsyncThunk(
+  'auth/logOutUser',
+  async (_, { dispatch, rejectWithValue }) => {
+    try {
+      API.post('/auth/logout/');
+
+      dispatch(
+        showAlert({ message: 'Logged Out Successfully', type: 'success' })
+      );
+      return true;
+    } catch (error) {
+      console.log(error.response);
+      dispatch(
+        showAlert({ message: 'Error while Logging Out!', type: 'error' })
+      );
+      return false;
+    }
+  }
+);
+
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {
+    logOut: (state) => {
+      state.user = {};
+      localStorage.removeItem('user');
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(userLogin.fulfilled, (state, { payload }) => {
       if (payload) {
@@ -91,9 +118,19 @@ export const authSlice = createSlice({
     builder.addCase(userRegister.fulfilled, (state, { payload }) => {
       if (payload) {
         state.user = payload.user;
+        console.log('hieub in the        auth');
+      }
+    });
+
+    builder.addCase(logOutUser.fulfilled, (state, { payload }) => {
+      if (payload) {
+        state.user = {};
+        localStorage.removeItem('user');
       }
     });
   },
 });
+
+export const { logOut } = authSlice.actions;
 
 export default authSlice.reducer;

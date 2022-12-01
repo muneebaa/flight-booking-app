@@ -7,10 +7,13 @@ import CardImage from 'global/components/Card/CardImage';
 import { getAllPlaces } from 'services/places/index';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { hideHeaderFooter } from 'store/features/hideSlice';
 
 function Home() {
   const [allPlaces, setAllPlaces] = useState();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleGetAllPlaces = async () => {
     // dispatch(setLoading());
@@ -21,6 +24,12 @@ function Home() {
 
   useEffect(() => {
     handleGetAllPlaces();
+  }, []);
+
+  useEffect(() => {
+    console.log('useEffect');
+
+    dispatch(hideHeaderFooter(false));
   }, []);
 
   return (

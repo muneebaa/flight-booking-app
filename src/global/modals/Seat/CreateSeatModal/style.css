@@ -1,0 +1,19 @@
+.inner-input{
+    width: 100%;
+    margin-top: 1em;
+}
+
+.input-single select{
+    padding: 1em;
+    margin-top: 1em;
+    width: 100%;
+    border: 1px solid var(--clr-border);
+    border-radius: 5px;
+    outline: none;
+}
+.modal-seat-type{
+    position: relative;
+    top: -33px;
+    left:70px;
+    font-weight: bolder;
+}

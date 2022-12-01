@@ -1,0 +1,50 @@
+.create-place-main{
+}
+
+.get-all-table-main{
+    margin-top: 1em;
+    overflow: auto;
+    height: 50vh;
+}
+
+.get-all-table-single{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.get-all-table-single th{
+    text-align: left;
+}
+
+.get-all-table-single td,
+.get-all-table-single th {
+    border: 1px solid #ddd;
+    padding: 1em;
+}
+
+.get-all-table-single tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.get-all-table-single tr:hover {
+    background-color: #c7c6ff;
+}
+
+.get-all-table-single th {
+    text-align: left;
+    background-color: var(--clr-main-light);
+    color: white;
+    /* width: 170px; */
+}
+
+.edit-icon{
+    color: rgb(0, 162, 0);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.delete-icon {
+    color: rgb(189, 10, 10);
+    font-size: 1.5rem;
+    text-align: center;
+}

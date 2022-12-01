@@ -6,7 +6,7 @@ import { userLogin } from 'store/features/authSlice';
 
 import './style.css';
 
-function Login() {
+function Login({ setLoginVisible }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
@@ -18,24 +18,19 @@ function Login() {
       password: password,
     };
     await dispatch(userLogin(payload)).unwrap();
+
+    setLoginVisible(false);
   };
 
   return (
     <>
       <div className='login-main'>
-        <h1>Sign up for GetGo</h1>
+        <h1>Sign in for GetGo</h1>
         <div className='login-content flex-col'>
           <p>
             GetGo is totally free to use. Sign up using your email address below
             to get started.
           </p>
-          {/* <input
-          type='text'
-          placeholder='Name'
-          onChange={(e) =>
-            setInfo((prevState) => ({ ...prevState, name: e.target.value }))
-          }
-        /> */}
           <input
             type='text'
             value={email}
@@ -49,9 +44,11 @@ function Login() {
             placeholder='Password...'
           />
           <Button
-            value='Create account'
+            value='Login'
             width='100%'
-            onClick={() => handleClick(email, password)}
+            onClick={() => {
+              handleClick(email, password);
+            }}
           />
         </div>
       </div>

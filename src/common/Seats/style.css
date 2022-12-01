@@ -1,17 +1,39 @@
-.seats-form-main{
+.seats-form-main {
     display: flex;
     justify-content: space-between;
     width: 100%;
-        padding:0;
+    padding: 0;
 }
+
+.main-container{
+    /* background: url(../../images/plane.png);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    min-height: 100%;
+    display: block; */
+
+    /* position: relative; */
+
+
+}
+/* .main-container img{
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+} */
 
 .plane-main {
-    width: 50%;
+        width: 50%;
 }
 
-
-.plane-first{
-    width: 300px;
+.plane-first {
+    width: 270px;
     padding: 1em;
     margin: 0 auto;
     border-radius: 4px;
@@ -22,7 +44,7 @@
     z-index: 3;
 }
 
-.plane-second{
+.plane-second {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(124, 141, 176, 0.2);
     border-radius: 4px;
@@ -33,7 +55,7 @@
     flex-direction: column;
 }
 
-.plane-seats-main{
+.plane-seats-main {
     background: #FFFFFF;
     border-radius: 8px;
     margin-top: 1em;
@@ -44,12 +66,25 @@
     align-items: center;
 }
 
-.plane-seats-business{
-    /* height: 35%; */
+.business-seat-col-main {
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 1em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
 }
 
-.plane-seats-economy {
-    /* height: 60%; */
+.business-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.business-seat-row {
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
 }
 
 .b-sets {
@@ -57,7 +92,7 @@
     height: 40px;
     background: #E9E8FC;
     border-radius: 4px;
-    margin: 1em 0;
+    margin: .5em 0;
 }
 
 
@@ -66,37 +101,79 @@
 }
 
 .e-sets {
-    width: 30px;
-    height: 40px;
+    width: 22px;
+    height: 32px;
     background: #E9E8FC;
     border-radius: 4px;
-    margin: 1em 0;
+    margin: .5em 0;
 }
-
 
 .e-sets-to-booked {
- background: linear-gradient(180deg, #605DEC 0%, #2A26D9 100%);
+    background: linear-gradient(180deg, #605DEC 0%, #2A26D9 100%);
 }
+
+.economy-seat-col-main {
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 1em;
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.economy-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.economy-seat-row {
+    display: flex;
+    justify-content: space-between;
+    width: 37%;
+
+}
+
+.seat-index {
+    color: var(--clr-text-dark);
+}
+
+.economy-seat-col-main :nth-child(5n) {
+    margin-bottom: 1em;
+}
+
+.economy-seat-col-main :nth-child(5n)::before {
+    content: 'ⓘExitrow';
+    font-weight: bolder;
+    color: var(--clr-text-dark);
+    display: inline-block;
+    font-size: .75rem;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    width: 1.5em;
+    margin-top: 65px;
+    position: absolute;
+}
+
+
 
 .sets-checked::before {
     content: "✓";
     background: linear-gradient(180deg, #EB568C 0%, #ED5E76 100%);
-    width:100%;
+    width: 100%;
     height: 100%;
     border-radius: 4px;
     font-weight: bolder;
     color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: inline-block;
-}
-
-.all-seats-main{
-    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+
 
 
 
@@ -110,21 +187,23 @@
     left: 50%;
     position: fixed;
     height: 100vh;
-
+    border-left: 2px solid var(--clr-border-light);
 }
 
-.seats-head{
+.seats-head {
     display: flex;
     background-color: #27273F;
     color: white;
 }
 
-.seat-place,.seat-dept,.seat-arr{
+.seat-place,
+.seat-dept,
+.seat-arr {
     width: 33.333%;
     padding: 20px 24px;
 }
 
-.seat-place{
+.seat-place {
     display: flex;
     justify-content: space-between;
     font-weight: 800;
@@ -134,25 +213,28 @@
     padding: 1em;
 }
 
-.seat-arr{
+.seat-arr {
     background-color: var(--clr-main);
 }
 
-.seat-dept,.seat-arr{
+.seat-dept,
+.seat-arr {
     font-size: 18px;
 }
 
-.seat-dept .p-small,.seat-arr .p-small{
+.seat-dept .p-small,
+.seat-arr .p-small {
     font-size: 12px;
     color: var(--clr-border);
-    margin-top:0.5em ;
+    margin-top: 0.5em;
 }
 
-.seats-body{
+.seats-body {
     display: flex;
+    padding: 1em;
 }
 
-.seats-economy{
+.seats-economy {
     width: 50%;
 }
 
@@ -160,7 +242,7 @@
     width: 50%;
 }
 
-.seat-type{
+.seat-type {
     margin-top: 2em;
 }
 
@@ -169,18 +251,18 @@
     align-items: center;
 }
 
-.seat-type .seat-image{
+.seat-type .seat-image {
     width: 100%;
     height: 200px;
 }
 
-.seat-type .seat-image img{
+.seat-type .seat-image img {
     width: 100%;
     height: 100%;
-    object-fit:contain;
+    object-fit: contain;
 }
 
-.seat-type .seat-type-name h2{
+.seat-type .seat-type-name h2 {
     font-weight: 600;
     font-size: 18px;
     color: var(--clr-text-dark);
@@ -190,12 +272,12 @@
     background: linear-gradient(180deg, #605DEC 0%, #2A26D9 100%);
     border: none;
     color: white;
-    padding:5px;
+    padding: 5px;
     border-radius: 5px;
     margin-left: 1em;
 }
 
-.seat-type-text{
+.seat-type-text {
     font-weight: 400;
     font-size: 14px;
     color: var(--clr-text-light);
@@ -208,19 +290,21 @@ ul {
     list-style: none;
 }
 
-ul li{
-   color: var(--clr-text-dark);
-   margin-top: 1em;
+ul li {
+    color: var(--clr-text-dark);
+    margin-top: 1em;
 }
 
+
+
 .seats-economy ul li::before {
-  content: "\2022";
-  color: var(--clr-main);
-  font-weight: bolder;
-  display: inline-block;
-  font-size: 2rem;
-  width: 1.5em;
-  margin-left: -1em;
+    content: "\2022";
+    color: var(--clr-main);
+    font-weight: bolder;
+    display: inline-block;
+    font-size: 2rem;
+    width: 1.5em;
+    margin-left: -1em;
 }
 
 .seats-business ul li:before {
@@ -228,24 +312,36 @@ ul li{
     color: #5CD6C0;
     font-weight: bolder;
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     width: 1.5em;
     margin-left: -1em;
 }
 
-.seats-footer{
-    background-color:#FAFAFE;
+
+.seats-footer {
+    background-color: #FAFAFE;
     display: flex;
     align-items: center;
     padding: 2em;
+    margin-top: auto;
+
+    position: fixed;
+        left: 50%;
+        bottom: 0px;
+        width: 50%;
+    border-left: 2px solid var(--clr-border-light);
+    border-top: 2px solid var(--clr-border-light);
+        /* height: 30px; */
 }
 
-.seat-foot-name,.seat-foot-number,.seat-foot-button{
+.seat-foot-name,
+.seat-foot-number,
+.seat-foot-button {
     width: 33.333%;
 }
 
 .seat-foot-name p:nth-child(1),
-.seat-foot-number p:nth-child(1){
+.seat-foot-number p:nth-child(1) {
     color: var(--clr-text-light);
     font-weight: 400;
     font-size: 14px;
@@ -258,7 +354,7 @@ ul li{
     font-size: 18px;
 }
 
-.seat-foot-button{
+.seat-foot-button {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;

@@ -53,7 +53,7 @@
     font-size: 16px;
 }
 
-.dept-company-airtime :nth-child(2),.dept-stops :nth-child(2),.selected-flight-company :nth-child(2) {
+.dept-company-airtime :nth-child(2),.dept-stops :nth-child(2),.selected-flight-company :nth-child(2),.selected-flight-times :nth-child(2){
     font-weight: 400;
     font-size: 16px;
     color: var(--clr-text-light);
